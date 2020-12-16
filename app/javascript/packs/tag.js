@@ -10,6 +10,7 @@ if (location.pathname.match("tweets/new")){
       XHR.onload = () => {
         const tagName = XHR.response.keyword;
         const searchResult = document.getElementById("search-result");
+        searchResult.innerHTML = "";
         tagName.forEach((tag) => {
           const childElement = document.createElement("div");
           childElement.setAttribute("class", "child");
