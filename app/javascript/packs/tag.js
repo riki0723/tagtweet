@@ -16,6 +16,11 @@ if (location.pathname.match("tweets/new")){
           childElement.setAttribute("id", tag.id);
           childElement.innerHTML = tag.name;
           searchResult.appendChild(childElement);
+          const clickElement = document.getElementById(tag.id);
+          clickElement.addEventListener("click", () => {
+            document.getElementById("tweets_tag_name").value = clickElement.textContent;
+            clickElement.remove();
+          });
         });
       };
     });
