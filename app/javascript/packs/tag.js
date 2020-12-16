@@ -1,5 +1,8 @@
 if (location.pathname.match("tweets/new")){
   document.addEventListener("DOMContentLoaded", () => {
-    console.log("読み込み完了");
+    const inputElement = document.getElementById("tweets_tag_name");
+    inputElement.addEventListener("keyup", () => {
+      const keyword = document.getElementById("tweets_tag_name").value;
+    });
   });
 };
